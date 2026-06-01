@@ -1,0 +1,389 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:Arial, sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #ff758c,
+        #ff7eb3,
+        #ff9a9e
+    );
+
+    overflow-x:hidden;
+}
+
+/* PORTADA */
+
+.inicio{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:white;
+}
+
+.foto-principal{
+    width:280px;
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 25px rgba(255,255,255,.5);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.inicio p{
+    max-width:700px;
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+button{
+    background:white;
+    color:#ff4d6d;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* CORAZONES */
+
+.corazones span{
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:30px;
+
+    animation:subir 10s linear infinite;
+}
+
+.corazones span:nth-child(1){
+    left:10%;
+}
+
+.corazones span:nth-child(2){
+    left:25%;
+    animation-duration:8s;
+}
+
+.corazones span:nth-child(3){
+    left:40%;
+    animation-duration:12s;
+}
+
+.corazones span:nth-child(4){
+    left:60%;
+    animation-duration:9s;
+}
+
+.corazones span:nth-child(5){
+    left:80%;
+    animation-duration:11s;
+}
+
+.corazones span:nth-child(6){
+    left:90%;
+    animation-duration:7s;
+}
+
+@keyframes subir{
+
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* MENU */
+
+.menu{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:white;
+
+    padding:80px 20px;
+
+    text-align:center;
+}
+
+.menu h2{
+
+    color:#ff4d6d;
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+}
+
+.contenedor-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+}
+
+.menu-card{
+
+    width:220px;
+    height:220px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#ff7eb3;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-card span{
+
+    font-size:1.2rem;
+}
+
+.menu-card:hover{
+
+    transform:translateY(-10px);
+}
+
+/* PAGINAS */
+
+.pagina{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:white;
+
+    padding:60px 20px;
+
+    text-align:center;
+}
+
+.pagina h2{
+
+    color:#ff4d6d;
+
+    font-size:3rem;
+
+    margin-bottom:40px;
+}
+
+.contenido{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:2;
+}
+
+/* GALERIA */
+
+.galeria{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:40px;
+}
+
+.foto-card{
+
+    width:280px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 15px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.foto-card:hover{
+
+    transform:scale(1.03);
+}
+
+.foto-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+}
+
+.foto-card p{
+
+    padding:15px;
+
+    color:#555;
+}
+
+/* CARTA */
+
+.carta{
+
+    background:#ffe4ec;
+
+    position:relative;
+}
+
+.contenido-carta{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    line-height:2;
+
+    box-shadow:0 0 20px rgba(0,0,0,.1);
+
+    margin-bottom:40px;
+}
+
+.contenido-carta p{
+
+    color:#555;
+
+    margin-bottom:20px;
+}
+
+/* MY MELODY */
+
+.melody{
+
+    position:absolute;
+
+    width:120px;
+}
+
+.melody1{
+
+    top:20px;
+    left:20px;
+}
+
+.melody2{
+
+    top:20px;
+    right:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    .menu h2,
+    .pagina h2{
+        font-size:2rem;
+    }
+
+    .foto-principal{
+        width:220px;
+        height:220px;
+    }
+
+    .menu-card{
+        width:180px;
+        height:180px;
+    }
+
+    .melody{
+        width:80px;
+    }
+
+    .contenido-carta{
+        padding:25px;
+    }
+}
