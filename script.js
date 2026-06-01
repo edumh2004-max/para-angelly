@@ -1,6 +1,10 @@
 const inicio = document.getElementById("inicio");
 const menu = document.getElementById("menu");
 
+const musica = document.getElementById("musica");
+
+musica.volume = 0.15;
+
 document.getElementById("entrar").addEventListener("click", () => {
 
     inicio.style.display = "none";
